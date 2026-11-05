@@ -122,7 +122,7 @@ Bạn có thể thiết lập biến môi trường trực tiếp từ terminal 
 
 ---
 
-### 🔹 Task 2: `call_gemini` (Google Gemini 2.5) — Trọng tâm chính!
+### 🔹 Task 2: `call_gemini` (Google Gemini 3.8 Flash) — Trọng tâm chính!
 Chúng ta sẽ sử dụng SDK mới nhất của Google (`google-genai`):
 * **SDK cần dùng:** `from google import genai` và `from google.genai import types`
 * **Cách khởi tạo:** `client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))`
@@ -153,7 +153,7 @@ Streaming giúp tạo trải nghiệm người dùng mượt mà giống như Ch
 * **Streaming logic:**
   ```python
   response_stream = client.models.generate_content_stream(
-      model="gemini-2.5-flash",
+      model="gemini-3.8-flash",
       contents=formatted_history
   )
   for chunk in response_stream:
